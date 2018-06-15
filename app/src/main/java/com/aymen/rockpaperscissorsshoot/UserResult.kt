@@ -40,15 +40,15 @@ class UserResult  : AppCompatActivity() {
         var userPick = getIntent().getExtras().getString("userPick")
 
         if(userPick.equals("rock")){
-            if(list.get(randomNum) == "rock"){
+            if(list.get(randomNum).equals("rock")){
                 txtResult.setText("Its a draw")
                 txtOpp.setText("Your opponent choose: " + list.get(randomNum))
             }
-            else if(list.get(randomNum) == "paper"){
+            else if(list.get(randomNum).equals("paper")){
                 txtResult.setText("You Lose")
                 txtOpp.setText("Your opponent choose: " + list.get(randomNum))
             }
-            else if(list.get(randomNum) == "scissors"){
+            else if(list.get(randomNum).equals("scissors")){
                 txtResult.setText("You Win")
                 txtOpp.setText("Your opponent choose: " + list.get(randomNum))
             }
@@ -56,15 +56,15 @@ class UserResult  : AppCompatActivity() {
 
         else if(userPick.equals("paper")){
 
-            if(list.get(randomNum) == "paper"){
+            if(list.get(randomNum).equals("paper")){
                 txtResult.setText("Its a draw")
                 txtOpp.setText("Your opponent choose: " + list.get(randomNum))
             }
-            else if(list.get(randomNum) == "scissors"){
+            else if(list.get(randomNum).equals("scissors")){
                 txtResult.setText("You Lose")
                 txtOpp.setText("Your opponent choose: " + list.get(randomNum))
             }
-            else if(list.get(randomNum) == "rock"){
+            else if(list.get(randomNum).equals("rock")){
                 txtResult.setText("You Win")
                 txtOpp.setText("Your opponent choose: " + list.get(randomNum))
             }
