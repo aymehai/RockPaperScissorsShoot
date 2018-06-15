@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.results_activity.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         setOnClickListenerForButton()
+        setExitListener()
     }
 
     private fun setOnClickListenerForButton(){
@@ -19,6 +21,12 @@ class MainActivity : AppCompatActivity() {
         btnYes.setOnClickListener{
             val intent = Intent(this,RockPaperSicssorsActivity::class.java)
             startActivity(intent)
+        }
+    }
+
+    fun setExitListener(){
+        btnNo.setOnClickListener {
+            this.finishAffinity()
         }
     }
 

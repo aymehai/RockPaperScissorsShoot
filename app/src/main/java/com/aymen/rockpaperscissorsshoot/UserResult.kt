@@ -25,6 +25,7 @@ class UserResult  : AppCompatActivity() {
 
         showResults()
         setOnClickListenerForButtonPlayAgain()
+        setExitListener()
 
     }
 
@@ -93,6 +94,12 @@ class UserResult  : AppCompatActivity() {
         btnPlay.setOnClickListener{
             val intent = Intent(this,RockPaperSicssorsActivity::class.java)
             startActivity(intent)
+        }
+    }
+
+    fun setExitListener(){
+        btnExit.setOnClickListener {
+        this.finishAffinity()
         }
     }
 
