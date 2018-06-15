@@ -11,7 +11,6 @@ class UserResult  : AppCompatActivity() {
 
     val list = ArrayList<String>()
     var results : String = "loser"
-    var randomNum = 3
     var rock = 0
     var paper = 1
     var scissors = 2
@@ -32,8 +31,9 @@ class UserResult  : AppCompatActivity() {
 
     private fun showResults(){
 
+
         var random = Random()
-        randomNum = random.nextInt(3)
+        var randomNum = random.nextInt(3)
         println(random)
 
         var userPick = getIntent().getExtras().getString("userPick")
